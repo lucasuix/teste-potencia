@@ -1,0 +1,395 @@
+*********************************************************************************
+Teste Tensao DCDC, Load, StepUp: NG
+DCDC 24.51V *** Batt 6.89V ***
+Load 24.29V *** CF 0.12V ***
+*********************************************************************************
+Teste Circ Carga Bateria: NG
+DCDC 24.49V *** Batt 3.89V ***
+Load 24.30V *** CF 0.11V ***
+*********************************************************************************
+Teste Bateria isolado: NG
+DCDC 3.15V *** Batt 24.57V ***
+Load 15.86V *** CF 0.20V ***
+*********************************************************************************
+Teste Alarme Temp1: OK
+DCDC 1.57V *** Batt 24.62V ***
+Load 0.95V *** CF 0.16V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: NG
+DCDC 1.13V *** Batt 24.61V ***
+Load 0.61V *** CF 0.16V ***
+*********************************************************************************
+Teste Al. Temp2: OK
+DCDC 0.76V *** Batt 24.61V ***
+Load 0.36V *** CF 0.16V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: NG
+DCDC 0.52V *** Batt 24.61V ***
+Load 0.24V *** CF 0.16V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 70.0
+ADC_Batt: 23.45V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 70.0
+ADC_Batt: 23.45V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 62.9
+ADC_Batt: 19.70V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.6
+ADC_Batt: 23.22V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 68.0
+ADC_Batt: 22.80V
+*********************************************************************************
+Teste Tensao DCDC, Load, StepUp: OK
+DCDC 24.48V *** Batt 28.95V ***
+Load 24.27V *** CF 0.18V ***
+*********************************************************************************
+Teste Circ Carga Bateria: OK
+DCDC 24.19V *** Batt 25.68V ***
+Load 23.91V *** CF 14.06V ***
+*********************************************************************************
+Teste Bateria isolado: OK
+DCDC 3.14V *** Batt 24.48V ***
+Load 24.29V *** CF 0.20V ***
+*********************************************************************************
+Teste Alarme Temp1: OK
+DCDC 1.94V *** Batt 24.48V ***
+Load 1.76V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: OK
+DCDC 1.38V *** Batt 24.47V ***
+Load 24.30V *** CF 0.19V ***
+*********************************************************************************
+Teste Al. Temp2: OK
+DCDC 0.91V *** Batt 24.48V ***
+Load 1.74V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: OK
+DCDC 0.61V *** Batt 24.48V ***
+Load 24.30V *** CF 0.19V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.6
+ADC_Batt: 23.18V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 68.0
+ADC_Batt: 22.80V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 63.0
+ADC_Batt: 20.34V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 72.0
+ADC_Batt: 24.05V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 68.0
+ADC_Batt: 22.79V
+*********************************************************************************
+Teste Tensao DCDC, Load, StepUp: OK
+DCDC 24.49V *** Batt 28.94V ***
+Load 24.27V *** CF 0.21V ***
+*********************************************************************************
+Teste Circ Carga Bateria: OK
+DCDC 24.19V *** Batt 25.59V ***
+Load 23.91V *** CF 14.06V ***
+*********************************************************************************
+Teste Bateria isolado: OK
+DCDC 3.15V *** Batt 24.50V ***
+Load 24.30V *** CF 0.20V ***
+*********************************************************************************
+Teste Alarme Temp1: OK
+DCDC 1.95V *** Batt 24.47V ***
+Load 1.76V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: OK
+DCDC 1.38V *** Batt 24.48V ***
+Load 24.32V *** CF 0.20V ***
+*********************************************************************************
+Teste Al. Temp2: OK
+DCDC 0.90V *** Batt 24.48V ***
+Load 1.76V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: OK
+DCDC 0.61V *** Batt 24.48V ***
+Load 24.30V *** CF 0.19V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.6
+ADC_Batt: 23.19V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 68.0
+ADC_Batt: 22.80V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 63.0
+ADC_Batt: 20.32V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.6
+ADC_Batt: 23.17V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 68.0
+ADC_Batt: 22.80V
+*********************************************************************************
+Teste Bateria isolado: OK
+DCDC 3.10V *** Batt 24.48V ***
+Load 24.53V *** CF 0.20V ***
+*********************************************************************************
+Teste Alarme Temp1: NG
+DCDC 1.93V *** Batt 24.33V ***
+Load 23.98V *** CF 0.19V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: OK
+DCDC 1.38V *** Batt 24.48V ***
+Load 24.35V *** CF 0.19V ***
+*********************************************************************************
+Teste Al. Temp2: NG
+DCDC 0.90V *** Batt 24.33V ***
+Load 23.98V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: OK
+DCDC 0.61V *** Batt 24.51V ***
+Load 24.35V *** CF 0.20V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 70.0
+ADC_Batt: 23.41V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 67.8
+ADC_Batt: 22.71V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 63.0
+ADC_Batt: 20.40V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.8
+ADC_Batt: 23.29V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 67.8
+ADC_Batt: 22.72V
+*********************************************************************************
+Teste Bateria isolado: OK
+DCDC 2.99V *** Batt 24.50V ***
+Load 24.55V *** CF 0.20V ***
+*********************************************************************************
+Teste Alarme Temp1: NG
+DCDC 1.89V *** Batt 24.35V ***
+Load 24.00V *** CF 0.19V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: OK
+DCDC 1.36V *** Batt 24.47V ***
+Load 24.35V *** CF 0.20V ***
+*********************************************************************************
+Teste Al. Temp2: NG
+DCDC 0.88V *** Batt 24.34V ***
+Load 24.01V *** CF 0.19V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: OK
+DCDC 0.60V *** Batt 24.52V ***
+Load 24.35V *** CF 0.20V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 70.0
+ADC_Batt: 23.40V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 67.8
+ADC_Batt: 22.71V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 63.0
+ADC_Batt: 20.25V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.8
+ADC_Batt: 23.32V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 67.8
+ADC_Batt: 22.72V
+*********************************************************************************
+Teste Bateria isolado: NG
+DCDC 21.27V *** Batt 24.50V ***
+Load 0.09V *** CF 0.20V ***
+*********************************************************************************
+Teste Alarme Temp1: OK
+DCDC 1.68V *** Batt 24.62V ***
+Load 0.04V *** CF 0.16V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: NG
+DCDC 1.21V *** Batt 24.61V ***
+Load 0.03V *** CF 0.16V ***
+*********************************************************************************
+Teste Al. Temp2: OK
+DCDC 0.80V *** Batt 24.60V ***
+Load 0.02V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: NG
+DCDC 0.53V *** Batt 24.61V ***
+Load 0.02V *** CF 0.16V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 70.0
+ADC_Batt: 23.44V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 70.0
+ADC_Batt: 23.44V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 63.0
+ADC_Batt: 24.61V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 72.0
+ADC_Batt: 24.13V
+*********************************************************************************
+Teste Tensao DCDC, Load, StepUp: OK
+DCDC 24.50V *** Batt 28.94V ***
+Load 24.28V *** CF 0.22V ***
+*********************************************************************************
+Teste Circ Carga Bateria: OK
+DCDC 24.20V *** Batt 25.60V ***
+Load 23.91V *** CF 14.06V ***
+*********************************************************************************
+Teste Bateria isolado: OK
+DCDC 3.15V *** Batt 24.48V ***
+Load 24.30V *** CF 0.20V ***
+*********************************************************************************
+Teste Alarme Temp1: OK
+DCDC 1.96V *** Batt 24.52V ***
+Load 1.76V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: OK
+DCDC 1.39V *** Batt 24.50V ***
+Load 24.31V *** CF 0.20V ***
+*********************************************************************************
+Teste Al. Temp2: OK
+DCDC 0.91V *** Batt 24.51V ***
+Load 1.75V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: OK
+DCDC 0.61V *** Batt 24.50V ***
+Load 24.32V *** CF 0.20V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.6
+ADC_Batt: 23.19V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 68.0
+ADC_Batt: 22.79V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 63.0
+ADC_Batt: 20.03V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 72.0
+ADC_Batt: 24.01V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 68.0
+ADC_Batt: 22.80V
+*********************************************************************************
+Teste Tensao DCDC, Load, StepUp: OK
+DCDC 24.49V *** Batt 28.97V ***
+Load 24.28V *** CF 0.18V ***
+*********************************************************************************
+Teste Circ Carga Bateria: OK
+DCDC 24.22V *** Batt 24.35V ***
+Load 23.96V *** CF 14.06V ***
+*********************************************************************************
+Teste Bateria isolado: OK
+DCDC 3.16V *** Batt 24.47V ***
+Load 24.33V *** CF 0.19V ***
+*********************************************************************************
+Teste Alarme Temp1: OK
+DCDC 1.96V *** Batt 24.56V ***
+Load 1.90V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: OK
+DCDC 1.38V *** Batt 24.44V ***
+Load 24.34V *** CF 0.20V ***
+*********************************************************************************
+Teste Al. Temp2: OK
+DCDC 0.90V *** Batt 24.47V ***
+Load 1.88V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: OK
+DCDC 0.60V *** Batt 24.50V ***
+Load 24.33V *** CF 0.20V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.6
+ADC_Batt: 23.21V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 67.8
+ADC_Batt: 22.71V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 63.0
+ADC_Batt: 20.38V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.6
+ADC_Batt: 23.19V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 67.8
+ADC_Batt: 22.71V
+*********************************************************************************
+Teste Tensao DCDC, Load, StepUp: OK
+DCDC 24.51V *** Batt 28.84V ***
+Load 24.28V *** CF 0.21V ***
+*********************************************************************************
+Teste Circ Carga Bateria: OK
+DCDC 24.20V *** Batt 25.47V ***
+Load 23.91V *** CF 14.06V ***
+*********************************************************************************
+Teste Bateria isolado: OK
+DCDC 3.02V *** Batt 24.46V ***
+Load 24.29V *** CF 0.20V ***
+*********************************************************************************
+Teste Alarme Temp1: OK
+DCDC 1.91V *** Batt 24.53V ***
+Load 1.75V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: OK
+DCDC 1.37V *** Batt 24.47V ***
+Load 24.30V *** CF 0.20V ***
+*********************************************************************************
+Teste Al. Temp2: OK
+DCDC 0.90V *** Batt 24.50V ***
+Load 1.73V *** CF 0.20V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: OK
+DCDC 0.61V *** Batt 24.47V ***
+Load 24.30V *** CF 0.19V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.6
+ADC_Batt: 23.25V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 67.8
+ADC_Batt: 22.71V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 63.0
+ADC_Batt: 20.33V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 69.8
+ADC_Batt: 23.30V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 67.8
+ADC_Batt: 22.71V
+*********************************************************************************
+Teste Bateria isolado: NG
+DCDC 0.00V *** Batt 24.61V ***
+Load 0.01V *** CF 0.16V ***
+*********************************************************************************
+Teste Alarme Temp1: OK
+DCDC 0.00V *** Batt 24.62V ***
+Load 0.00V *** CF 0.16V ***
+*********************************************************************************
+Teste Retorno Al. Temp1: NG
+DCDC 0.01V *** Batt 24.61V ***
+Load 0.00V *** CF 0.16V ***
+*********************************************************************************
+Teste Al. Temp2: OK
+DCDC 0.01V *** Batt 24.61V ***
+Load 0.00V *** CF 0.16V ***
+*********************************************************************************
+Teste Retorno Al. Temp2: NG
+DCDC 0.00V *** Batt 24.60V ***
+Load 0.00V *** CF 0.20V ***
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 70.0
+ADC_Batt: 23.45V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 70.0
+ADC_Batt: 23.45V
+***** ADC_load caiu abaixo de 5V *****
+Duty: 63.0
+ADC_Batt: 24.62V
+***** ADC_5V caiu abaixo de 5V *****
+Duty: 72.0
+ADC_Batt: 24.12V
+***** ADC_15V caiu abaixo de 15V *****
+Duty: 72.0
+ADC_Batt: 24.12V

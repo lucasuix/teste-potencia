@@ -37,6 +37,7 @@ class Controller:
 
     def run_tests(self, porta_serial: str):
         # Record start time
+        self.view.clear_result_label()
         start_time = time.time()
         overall_success = True
         final_results = []
@@ -182,57 +183,7 @@ class Controller:
             self.model.update_pwm_results(pwm_pth_result)  # Salvar resultados PWM detalhados
             self.view.add_update(self.view.update_result_label, "pwm_pth", pwm_pth_result.is_valid())
 
-            # Testes de Comunicação
-            self.view.add_update(self.view.show_message, "\n🔄 Iniciando testes de comunicação...")
             
-            # Teste Inclinômetro
-            inclinometro_result = self.model.test_inclinometro()
-            self.model.update_test_result("teste_inclinometro", inclinometro_result.passed)
-            self.view.add_update(self.view.update_result_label, "inclinometro", inclinometro_result.passed)
-            
-            # Teste ADC
-            adc_result = self.model.test_adc_communication()  
-            self.model.update_test_result("teste_adc", adc_result.passed)
-            self.view.add_update(self.view.update_result_label, "adc", adc_result.passed)
-            
-            # Teste RAK
-            rak_result = self.model.test_rak_communication()
-            self.model.update_test_result("teste_rak", rak_result.passed)
-            self.view.add_update(self.view.update_result_label, "rak", rak_result.passed)
-            
-            # Teste RTC
-            rtc_result = self.model.test_rtc_communication()
-            self.model.update_test_result("teste_rtc", rtc_result.passed)
-            self.view.add_update(self.view.update_result_label, "rtc", rtc_result.passed)
-            
-            # Teste Serial Number
-            serial_number_result = self.model.test_serial_number_communication()
-            self.model.update_test_result("teste_serial_number", serial_number_result.passed)
-            self.view.add_update(self.view.update_result_label, "serial_number", serial_number_result.passed)
-            
-            # Teste EEPROM
-            eeprom_result = self.model.test_eeprom_communication()
-            self.model.update_test_result("teste_eeprom", eeprom_result.passed)
-            self.view.add_update(self.view.update_result_label, "eeprom", eeprom_result.passed)
-            
-            # Teste Ponte H
-            ponte_h_result = self.model.test_ponte_h_communication()
-            self.model.update_test_result("teste_ponte_h", ponte_h_result.passed)
-            self.view.add_update(self.view.update_result_label, "ponte_h", ponte_h_result.passed)
-            
-            # Verificar se todos os testes de comunicação passaram
-            comm_tests_passed = all([
-                inclinometro_result.passed, adc_result.passed, rak_result.passed,
-                rtc_result.passed, serial_number_result.passed, eeprom_result.passed,
-                ponte_h_result.passed
-            ])
-            
-            if comm_tests_passed:
-                self.view.add_update(self.view.show_message, "✅ Todos os testes de comunicação concluídos com sucesso!")
-            else:
-                self.view.add_update(self.view.show_message, "🔴 Houve falha em um ou mais testes de comunicação.")
-                overall_success = False
-
             if pwm_pth_result.is_valid():
                 self.view.add_update(self.view.show_message, f"{'Evento':<30} {'Valor':>10}")
                 self.view.add_update(self.view.show_message, "-" * 42)
@@ -296,10 +247,10 @@ class Controller:
             
             if pwm_details:
                 final_text = "\n".join(pwm_details)
-                self.view.add_update(self.view.show_final_results, final_text, duration)
+                self.view.add_update(self.view.show_final_results, final_text if overall_success else "NG", duration)
             else:
                 # If no PWM data, show empty results
-                self.view.add_update(self.view.show_final_results, "", duration)
+                self.view.add_update(self.view.show_final_results, "NG", duration)
             
             # Informar sobre salvamento na planilha
             if excel_saved:

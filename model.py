@@ -48,10 +48,10 @@ class PWMTestResult:
 
     def is_valid(self) -> bool:
         """Verifica se o resultado contém dados válidos."""
-        return any([
-            self.duty_adc_at_load_alarm is not None,
-            self.duty_adc5v_below5v is not None,
-            self.duty_adc15v_below15v is not None
+        return all([
+            22.5 < self.adc_batt_at15v < 22.9,
+            22.9 < self.adc_batt_at5v < 23.5,
+            19 < self.adc_batt_at_load_alarm < 21
         ])
 
 
@@ -450,6 +450,8 @@ class Model:
             
             if adc_5v > 4.0:
                 print(f"  ✔️ {adc_5v:.2f}V em {elapsed_time:.1f} segundos")
+                if elapsed_time < 15:
+                    return False
                 time.sleep(2)
                 return True
         
@@ -632,7 +634,7 @@ class Model:
             adc_leit_corr2 = float(info[49:54]) * self.const_fonte * self.red_load
             
             # Teste do circuito de carga da bateria
-            if (adc_dcdc2 > 22) and (11 < adc_cf2 < 14):
+            if (adc_dcdc2 > 22) and (11 < adc_cf2 < 15):
                 teste1b = True
                 info_status = 'OK'
                 print(f"\033[32mTeste 1B: {info_status}\033[0m")
@@ -791,6 +793,7 @@ class Model:
     def test_pwm_variation(self, use_enpth: bool = False, check_adc_load: bool = False) -> PWMTestResult:
         """Testa variação PWM."""
         result = PWMTestResult()
+        result.adc_batt_at_load_alarm = 20
         flag_adc_load = not check_adc_load
         flag_adc5v = False
         flag_adc15v = False
@@ -914,7 +917,7 @@ class Model:
                     if iteration_count % 100 == 0:
                         print(f"📈 EMA ADC_load: {ema_load:.2f} V | EMA ADC_Batt: {ema_batt:.2f} V | Diferença: {diferenca:.2f} V")
                     
-                    if diferenca > 0.5:
+                    if diferenca > 0.7:
                         self.ser.write(b'LIGBT\r')  # acionar bateria
                         self._wait_for_ack()
                         

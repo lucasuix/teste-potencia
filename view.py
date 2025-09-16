@@ -538,6 +538,24 @@ class View:
             if self.page:
                 self.page.update()
 
+    def clear_result_label(self) -> None:
+        for key in peripherals_list:
+            container = self.results.get(key)
+            if container:
+                color = self.TEXT_MUTED
+                text = "--"
+                container.bgcolor = color
+                container.content.value = text
+                container.content.color = self.TEXT_PRIMARY
+                container.shadow = ft.BoxShadow(
+                    spread_radius=0,
+                    blur_radius=4,
+                    color=color + "40",
+                    offset=ft.Offset(0, 2),
+                )
+                if self.page:
+                    self.page.update()
+
     def toggle_connection(self, is_connected: bool) -> None:
         button = self.connect_btn.content
         button_row = button.content
