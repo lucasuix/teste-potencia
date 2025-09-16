@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(timeout:*)",
+      "Read(c:\\Users\\Gustavo\\Desktop\\JIGA UNIFICADA/**)",
+      "Read(c:\\Users\\Gustavo\\Desktop\\JIGA UNIFICADA/**)",
+      "Bash(dir \"C:\\Users\\Gustavo\\Desktop\\JIGA UNIFICADA\")",
+      "Bash(dir \"C:\\Users\\Gustavo\\Desktop\\JIGA UNIFICADA\\log\")",
+      "Bash(pip install:*)",
+      "Bash(del \"C:\\Users\\Gustavo\\Desktop\\JIGA UNIFICADA\\test_excel_integration.py\")",
+      "Bash(del test_excel_integration.py)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
