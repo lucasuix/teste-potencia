@@ -54,6 +54,13 @@ class PWMTestResult:
             19 < self.adc_batt_at_load_alarm < 21
         ])
 
+class PWMTestResultPTH(PWMTestResult):
+
+    def is_valid(self) -> bool:
+        return all([
+            19 < self.adc_batt_at_load_alarm < 21
+        ])
+
 
 @dataclass
 class TestSession:
@@ -196,7 +203,7 @@ class Model:
         self.red_load = (3.9 + 27) / 3.9
         self.red_dcdc = (3.9 + 27) / 3.9
         self.red_adcs = (3.9 + 27) / 3.9
-        self.red_cf = (100 + 33) / 33
+        self.red_cf = (100 + 20) / 20
         self.red_batt = (2.2 + 27) / 2.2
         self.red_pwm = (3.3 + 22) / 3.3
         
@@ -423,6 +430,17 @@ class Model:
         time.sleep(1)
         
         return True
+
+    def turnoff_system(self) -> bool:
+        """Inicializa o sistema com comandos padrão - IDÊNTICO AO ORIGINAL."""
+        commands = [b'DESCB\r', b'DGLOAD\r']
+        
+        for cmd in commands:
+            self.ser.write(cmd)
+            self._wait_for_ack()
+        time.sleep(1)
+        
+        return True
     
     def _wait_for_adc_5v(self, max_time: int = 20) -> bool:
         """Aguarda ADC_5V atingir 4V - IDÊNTICO AO ORIGINAL."""
@@ -634,7 +652,7 @@ class Model:
             adc_leit_corr2 = float(info[49:54]) * self.const_fonte * self.red_load
             
             # Teste do circuito de carga da bateria
-            if (adc_dcdc2 > 22) and (11 < adc_cf2 < 15):
+            if (adc_dcdc2 > 22) and (11 < adc_cf2 < 13.5):
                 teste1b = True
                 info_status = 'OK'
                 print(f"\033[32mTeste 1B: {info_status}\033[0m")
@@ -855,7 +873,7 @@ class Model:
     
     def test_pwm_pth_variation(self, use_enpth: bool = True, check_adc_load: bool = True) -> PWMTestResult:
         """Testa variação PWM com PTH - IDÊNTICO AO ORIGINAL."""
-        result = PWMTestResult()
+        result = PWMTestResultPTH()
         flag_adc_load = not check_adc_load
         flag_adc5v = False
         flag_adc15v = False

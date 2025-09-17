@@ -16,7 +16,7 @@ const_fonte = V_fonte / 4096
 red_load= (3.9 + 27) / 3.9
 red_DCDC= (3.9 + 27) / 3.9
 red_ADCs = (3.9 + 27) / 3.9
-red_cf = (100 + 33) / 33
+red_cf = (100 + 20) / 20
 red_batt = (2.2 + 27) / 2.2
 red_PWM = (3.3 + 22) / 3.3
 
@@ -266,7 +266,7 @@ def testar_dcdc_e_carga(ser, const_fonte, red_cf, red_DCDC, red_batt, red_load, 
         ADC_LeitCorr=float(info[49:54]) * const_fonte * red_load   
 
         # Teste do circuito de carga da bateria
-        if (ADC_DCDC > 22) and (11 < ADC_cf < 14):
+        if (ADC_DCDC > 22) and (11 < ADC_cf < 13.5):
             Teste1B = True
             info_status = 'OK'
             print(f"\033[32mTeste 1B: {info_status}\033[0m")

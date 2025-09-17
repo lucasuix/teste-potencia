@@ -260,6 +260,9 @@ class Controller:
 
                 self.view.add_update(self.view.show_message, "⚠️ Erro ao salvar na planilha Excel")
             
+            # Desliga a placa
+            self.model.turnoff_system()
+            
             # Desconecta do model
             self.model.disconnect()
             self.view.add_update(self.view.show_message, "Porta serial fechada.")
